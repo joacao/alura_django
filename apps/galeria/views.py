@@ -27,3 +27,12 @@ def buscar(request):
             fotografias = Fotografia.objects.order_by('-data_fotografia').filter(publicada=True).filter(nome__icontains=nome_a_buscar)
 
     return render(request, 'galeria/buscar.html', {'cards':fotografias})
+
+def nova_imagem(request):
+    return render(request, 'galeria/nova_imagem.html')
+
+def editar_imagem(request):
+    ...
+
+def deletar_imagem(request):
+    ...
